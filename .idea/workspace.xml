@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92a4dd66-62b1-47f8-b786-0bfb87b338ba" name="Default Changelist" comment="" />
+    <list default="true" id="92a4dd66-62b1-47f8-b786-0bfb87b338ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/mojastranica/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mojastranica/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +36,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1g8cNjoo0XEuslkATfPzjqJ6VDf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -95,7 +101,7 @@
       <workItem from="1598993766222" duration="669000" />
       <workItem from="1599072458031" duration="16264000" />
       <workItem from="1600296468126" duration="2364000" />
-      <workItem from="1601730634401" duration="21841000" />
+      <workItem from="1601730634401" duration="22171000" />
     </task>
     <servers />
   </component>
