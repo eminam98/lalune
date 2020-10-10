@@ -1,0 +1,74 @@
+{% extends 'LaLune/base.html' %}
+{% block body %}
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><br><br>
+<p class="subtitle fancy"><span><i><b>KAKO NARUČITI</b></i></span></p><br>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<table class="pitanja" cellpadding="50px">
+  <tr class="pitanjaboja" style="padding:10px;" width="20%" height="200px">
+    <td>Registracija korisnika</td>
+    <td width="80%"><text style="font-size: 14px; color:black;">
+
+Registracija korisnika nije obavezna za razgledanje proizvoda i cijena. Međutim, kupovina preko sajta ne može se obaviti bez registracije korisnika. Korisnik koji želi izvršiti kupovinu preko internet stranice moraće se registrovati, te unijeti svoje podatke. <a href="{% url 'register' %}" style="text-decoration:none; color:#734f96">Registracija</a> se može obaviti jednostavnim popunjavanjem osnovnih podataka u formularu. Po završetku ovog procesa postali ste aktivan član i možete se logovati sa svojim korisničkim podacima.</text>
+    </td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="300px">
+    <td style="border-top: 1px solid #E0CCDE;">Kako poručivati?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">
+        Iz ponude proizvoda izaberite željeni artikal i kliknite "Dodaj u korpu". Nakon prvog poručenog artikla, formira se narudžbenica tj.korpa koja ostaje aktivna sve dok ne završite sa naručivanjem. <br><br>
+
+Prilikom poručivanja artikala, postoji mogućnost pregleda statusa trenutne korpe, gdje možete da pratite količinu poručenih proizvoda, kao i ukupan iznos porudžbine.<br><br>
+
+Nakon odabira svih artikala koje želite kupiti, u Korpi pritisnite dugme "Potvrdi narudžbu".  Klikom na Potvrdi narudžbu, narudžba je poslala u kompaniju, a na Vaš mail stiže potvrda o narudžbi. Vaša porudžbina će zatim biti automatski prosleđena našem prodajnom odjeljenju, koje će Vas potom telefonski kontaktirati, da bi potvrdili sve pojedinosti. Zbog toga je jako važno da broj telefona koji unesete bude tačan, jer se narudžba neće poslati bez telefonske potvrde.
+      </text></td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="350px">
+    <td style="border-top: 1px solid #E0CCDE;">Dostava robe</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">
+
+Dostava artikala koje ste poručili obavlja se u najkraćem mogućem roku putem kurirske službe ‘X Express’ brza pošta, koja je ujedno i naša preporuka, zbog sigurnog i ekonomičnog načina isporuke paketa.<br><br>
+
+Sva roba se nalazi u našem skladištu u BiH, ali nekada postoji mogućnost da nekog pojedinog proizvoda nema trenutno na stanju, pa ga naručujemo iz centralnog skladišta u Srbiji. Tako je rok za dostavu robe od 3 do maksimalno 7 radnih dana. O tim okolnostima će Vas upoznati iz prodajnog odjeljenja prilikom kontaktiranja za potvrdu narudžbe.<br><br>
+
+Kurirska služba će u skladu sa svojim radnim vremenom isporučiti Vašu pošiljku po sledećem principu:
+<ul class="dostava">
+<li>Porudžbine primljene radnim danom do 14h dostavljaju se sjledećeg radnog dana ili jedan dan nakon.</li>
+<li>Porudžbine primljene radnim danom posle 14h dostavljaju se za dva do tri radna dana.</li>
+<li>Porudžbine primljene petkom do 14h dostavljaju se u najkasnije u ponedeljak.</li>
+<li>Porudžbine primljene petkom  posle 14h i vikendom dostavljaju se u utorak ili najkasnije srijedu.</li>
+      </text></td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="100px">
+    <td style="border-top: 1px solid #E0CCDE;">Način plaćanja</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Plaćanje robe obavlja se pouzećem prilikom preuzimanja paketa od kurirske službe.</text>
+    </td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="150px">
+    <td style="border-top: 1px solid #E0CCDE;">Kontakt podrška</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Za sva pitanja i poteškoće prilikom poručivanja možete kontaktirati naše odeljenje za podršku internet kupcima:<br>
+
+<b style="color: #734f96;">Broj telefona:</b> +387 (0) 62 222 333<br>
+
+(svakim radnim danom od 08.00-20.00 h i subotom od 08.00-16.00 h)<br>
+<b style="color: #734f96;">E-mail:</b> cosmeticslalune@gmail.com</text>
+    </td>
+  </tr>
+</table>
+<table width="90%" style="margin-left: 100px">
+  <tr>
+    <td><img src="/static/img/mob.png" width="100" height="100"></td>
+    <td><text style="font-size:20px; color:#734f96;">Pozovite: +387 (0) 62 222 333</text><br>
+Za narudžbe ili dodatne informacije pozovite telefonom ili viberom<br><br>
+
+BRZA I SIGURNA ISPORUKA - PLAĆANJE POUZEĆEM!</td>
+    <td><text style="font-size:20px; color:#734f96;">Express dostava</text>
+      <ul class="dostava">
+<li>za narudžbe do 100 KM - troškovi dostave 7 KM</li>
+<li>za narudžbe preko 100 KM i do 10 kg -BESPLATNA ISPORUKA!</li>
+<li>za pošiljke preko 10 kg - IZUZETNO POVOLJNO!</li></ul></td>
+  </tr>
+</table><br><br><br>
+{% endblock %}

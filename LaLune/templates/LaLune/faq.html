@@ -1,0 +1,63 @@
+{% extends 'LaLune/base.html' %}
+{% block body %}
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><br><br>
+<p class="subtitle fancy"><span><i><b>FAQ</b></i></span></p><br>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<table class="pitanja" cellpadding="50px">
+  <tr class="pitanjaboja" style="padding:10px;" width="20%" height="400px">
+    <td>Politika vraćanja</td>
+    <td width="80%"><text style="font-size: 14px; color:black;">
+
+Nadamo se da ste zadovoljni sa svim našim proizvodima, ali ako vam iz bilo kojeg razloga trebate nešto vratiti, pošaljite svoj artikal u roku od 14 dana od primitka proizvoda na nižu adresu. Trenutno nema razmjene! Uključite broj svoje narudžbe na vanjskoj strani paketa!<br><br>
+
+<b>La Lune Cosmetics<br>
+
+ATTN: Povrat proizvoda<br>
+
+Pape Ivana Pavla II<br>
+
+Bihać, BiH 77000</b><br><br>
+
+Molimo dopustite 5-7 radnih dana od trenutka isporuke predmeta za vraćenu narudžbu na obradu. Bit ćete obaviješteni e-poštom na adresu e-pošte navedenu na vašem računu kada ste poslali svoju narudžbu. Imajte na umu da će vašoj bankarskoj ustanovi biti potrebno više vremena za obradu i objavu ove transakcije na vaš račun nakon što dobiju od nas podatke (obično 3-5 radnih dana).<br><br>
+
+Povrat novca možemo izvršiti samo u izvornom obliku plaćanja koji je upotrijebljen na mjestu kupnje. U slučaju da više nemate pristup ovom računu ili više nije aktivan, obrađivat ćemo vam povrat u obliku čeka poslanog na adresu u vašem korisničkom profilu, a obrada može potrajati 4-6 tjedana. Izvorni troškovi dostave se ne vraćaju.</text>
+    </td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="100px">
+    <td style="border-top: 1px solid #E0CCDE;">Šta radite s vraćenim proizvodima?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Idu direktno u raj šminke, to jest smeće! RIP.</text></td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="100px">
+    <td style="border-top: 1px solid #E0CCDE;">Odakle šaljete proizvode?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Bihać, Bosna i Hercegovina</text></td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="100px">
+    <td style="border-top: 1px solid #E0CCDE;">Jesu li vaši proizvodi testirani na životinjama?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Naši proizvodi nisu testirani na životinjama. Šminka je za ljude, a ne za životinje. La Lune Cosmetics ne surađuje sa kompanijama koje u bilo kojem aspektu proizvodnje testiraju na životinjama.</text>
+    </td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="100px">
+    <td style="border-top: 1px solid #E0CCDE;">Kako mogu ažurirati svoju narudžbu?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Nakon što se narudžba počne obrađivati, ne možemo je promijeniti. Ovo uključuje ažuriranja podataka o otpremi, kao i izbor proizvoda. Molimo da pažljivo pregledate svoju narudžbu prije nego što je pošaljete.</text>
+    </td>
+  </tr>
+    </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="100px">
+    <td style="border-top: 1px solid #E0CCDE;">Kako mogu naručiti?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Za sva pitanja u vezi sa naručivanjem, gdje šaljemo, poštarinu i slično, pogledajte <a href="{% url 'naruciti' %}" style="text-decoration:none; color:#734f96">ovdje!</a></text>
+    </td>
+  </tr>
+  <tr class="pitanjaboja" style="padding-top:20px;" width="20%" height="200px">
+    <td style="border-top: 1px solid #E0CCDE;">Nisam mogao/la pronaći odgovor na pitanje koje imam ovdje, šta da radim sada?</td>
+    <td style="border-top: 1px solid #E0CCDE;">
+      <text style="font-size: 14px; color:black;">Pošaljite nam e-mail! Naš tim za korisničku službu rado će vam pomoći u bilo kojem drugom pitanju! Pošaljite svoje ime, broj narudžbe (ako je primjenjivo) i pitanje na cosmeticslalune@gmail.com. Naše radno vrijeme za korisničku službu je od ponedjeljka do petka, 8:00. do 18:00, isključujući vikende i velike praznike. Naši timovi za korisnike će se potruditi da odgovore što je brže moguće, ali molimo vas da dopustite odgovor od 24 do 48 sati.</text>
+    </td>
+  </tr>
+</table>
+
+{% endblock %}

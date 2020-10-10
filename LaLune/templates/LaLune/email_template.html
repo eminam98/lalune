@@ -1,0 +1,11 @@
+Hvala Vam na narudžbi, {{ user.username }}!!
+
+
+Vaša narudžba ja zaprimljena! Molimo Vas da pričekate poziv na Vaš broj telefona!
+
+Vaša narudžba je:
+{% for item in items %}
+					Ime: {{ item.product.ime }}, Cijena: {{ item.product.cijena|floatformat:2 }}KM, Količina: {{ item.quantity }}, Ukupno: {{ item.get_total }}KM
+    {% endfor %}
+Proizvodi:{{ order.get_cart_items }}
+Ukupno:{{ order.get_cart_total |floatformat:2 }}KM

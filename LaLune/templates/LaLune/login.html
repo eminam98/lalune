@@ -1,0 +1,26 @@
+{% extends "LaLune/base.html" %}
+
+{% block body %}
+    <br>
+<p class="subtitle fancy"><span><i><b>PRIJAVA</b></i></span></p><br>
+
+
+<div class="s">
+  <div class="box-c">
+        <a href="#" class="custom-underline">PRIJAVA</a>
+      </div><br>
+      <text style="font-size:12px;">Unesite korisničko ime i lozinku</text>
+    {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+<form class="kontaktiranje" role="form" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include 'Lalune/form-template.html' %}<br>
+
+  <button type="submit" class="btn">PRIJAVA</button>
+
+
+  </form>
+Nemate profil? <a href="{% url 'register' %}">Registrirajte se!</a>
+</div>
+{% endblock %}

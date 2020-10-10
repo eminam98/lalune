@@ -1,0 +1,17 @@
+{% for field in form %}
+
+    {% if field.label == 'Password' %}
+
+        {{ field.label_tag }}<br>
+            <input type="password" class="form-control" id="{{field.id_for_label}}" name=" {{field.name}}" placeholder="{{ field.label }}"><br>
+
+
+    {% else %}
+        {{ field.label_tag }}<br>
+
+            <input type="text" class="form-control" id="{{field.id_for_label}}" name=" {{field.name}}" placeholder="{{ field.label }}"><br>
+
+    {% endif %}
+
+{% endfor %}
+

@@ -1,0 +1,147 @@
+{% extends 'LaLune/base.html' %}
+{% block body %}
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="/static/img/rek1.jpg" style="width:100%">
+    <div class="text">
+        <button class="btn"><a href="{% url 'proizvodi' %}" style="color: white;text-decoration: none;">KUPUJ NYX</a></button></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="/static/img/rek2.jpg" style="width:100%">
+    <div class="text">
+        <button class="btn2"><a href="{% url 'proizvodi' %}" style="color: white;text-decoration: none;">SAZNAJ VIŠE</a></button></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="/static/img/rek3.jpg" style="width:100%">
+    <div class="text">
+        <button class="btn"><a href="{% url 'proizvodi' %}" style="color: white;text-decoration: none;">SAZNAJ VIŠE</a></button></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<br><br>
+
+
+
+<div class="sign" align="center">
+      <span class="fast-flicker">Naj</span>bolji i<span class="flicker">z</span>bor koz<span class="flicker">m</span>etike
+</div><br><br><br>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<table width="90%" style="margin-left: 150px; align-content: center;" >
+  <tr>
+    <td width="50%">
+      <img src="/static/img/sl8.png" width="600" height="600" align="center">
+    </td>
+    <td width="50%">
+      <img src="/static/img/sl10.png" width="600" height="600" align="center">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="box-c">
+        <a href="#" class="custom-underline">NOVA KOLEKCIJA</a>
+      </div>
+    </td>
+    <td>
+      <div class="box-c">
+        <a href="#" class="custom-underline">NYX HIGHLIGHTERI</a>
+      </div>
+    </td>
+  </tr>
+
+</table>
+
+
+<br>
+
+
+
+<h2 align="center"><i>@lalunecosmetics</i></h2>
+
+<!--tabela slika-->
+<table class="tabela" align="center">
+  <tr>
+    <td>
+      <div class="kontejner">
+  <img src="/static/img/slika1.jpg" alt="Avatar" class="image" width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@jkissa</div>
+  </div>
+</div>
+</td>
+<td>
+  <div class="kontejner">
+  <img src="/static/img/slika2.jpg" alt="Avatar" class="image" width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@beatsbylizzie</div>
+  </div>
+</div>
+</td>
+<td>
+  <div class="kontejner">
+  <img src="/static/img/slika3.jpg" alt="Avatar" class="image" width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@nicaphan</div>
+  </div>
+</div>
+</td>
+<td>
+  <div class="kontejner">
+  <img src="/static/img/slika4.jpg" alt="Avatar" class="image"width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@emilyannecarden</div>
+  </div>
+</div>
+</td>
+
+<td>
+  <div class="kontejner">
+  <img src="/static/img/slika5.jpg" alt="Avatar" class="image"width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@mine.justine</div>
+  </div>
+</div>
+</td>
+<td>
+  <div class="kontejner">
+  <img src="/static/img/slika6.jpg" alt="Avatar" class="image"width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@jessicarose_makeup</div>
+  </div>
+</div>
+</td>
+<td>
+  <div class="kontejner">
+  <img src="/static/img/slika7.jpg" alt="Avatar" class="image"width="200" height="200">
+  <div class="prekrivanje">
+    <div class="tekst">@lsk_makeup</div>
+  </div>
+</div>
+</td>
+</tr>
+</table>
+<p align="right" class="izgledi"><a href="{% url 'galerija' %}">POGLEDAJTE VIŠE!</a></p>
+<p class="subtitle fancy"><span><i><b>BOLD.BEAUTIFUL.</b></i></span></p>
+<br><br>
+
+
+{% endblock %}

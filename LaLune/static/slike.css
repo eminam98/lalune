@@ -1,0 +1,68 @@
+.galerija-section{
+  width:100%;
+  padding: 60px 0;
+  background: white;
+
+}
+
+.inner-width{
+  width:100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.galerija-section h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+
+}
+
+.border{
+  width: 180px;
+  height: 4px;
+  background: #333333;
+  margin: 60px auto;
+}
+
+.galerija-section .galerija{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+
+}
+
+.galerija-section .image{
+  flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galerija-section .image img{
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.galerija-section .image:hover img{
+  transform: scale(1.4) rotate(15deg);
+}
+
+@media screen and (max-width: 960px){
+  .galerija-section .image{
+    flex: 33.33%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .galerija-section .image{
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 480px){
+  .galerija-section .image{
+    flex: 100%;
+  }
+}
+

@@ -1,0 +1,30 @@
+{% extends 'LaLune/base.html' %}
+{% block body %}
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><br><br>
+<p class="subtitle fancy"><span><i><b>REGISTRACIJA</b></i></span></p><br>
+
+<div class="e">
+
+
+  <div class="box-c">
+        <a href="#" class="custom-underline">REGISTRACIJA</a>
+      </div><br>
+<img src="/static/img/registracija.jpg" align="left" valign="top" width="400" height="400"><br>
+      <text style="font-size:12px; margin-left:100px;">ZA ZAVRŠETAK NARUDŽBE MORATE BITI REGISTROVANI I PRIJAVLJENI NA SVOJ NALOG!</text>
+
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+<form class="kontaktiranje" style="margin-left: 500px;" role="form" action="" method="post" enctype="multipart/form-data">
+    Shopper information
+  <hr style="border: 1px solid #E0CCDE;"><br>
+    {% csrf_token %}
+    {% include 'Lalune/form-template.html' %}<br>
+
+  <button type="submit" class="btn">REGISTRACIJA</button>
+  </form>
+</div>
+
+
+{% endblock %}

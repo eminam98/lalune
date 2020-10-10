@@ -1,0 +1,36 @@
+{% extends 'LaLune/base.html' %}
+{% block body %}
+    <br><br>
+
+    <p class="subtitle fancy"><span><i><b>PROIZVODI</b></i></span></p><br><br>
+    {% ifequal rijec "Oci" %}
+    <p class="subtitle fancy"><span><i><b>Oči</b></i></span></p><br>
+    {% endifequal %}
+        {% ifequal rijec "Lice" %}
+    <p class="subtitle fancy"><span><i><b>Lice</b></i></span></p><br>
+    {% endifequal %}
+    {% ifequal rijec "Usne" %}
+    <p class="subtitle fancy"><span><i><b>Usne</b></i></span></p><br>
+    {% endifequal %}
+<div style="margin-left:220px; margin-right: 180px;">
+{% for product in products %}
+  <div class="gallery">
+  <a target="_blank" href="{{ product.imageURL}}">
+    <img src="{{ product.imageURL }}" alt="{{ product.ime }}" width="600" height="400">
+  </a>
+  <div class="desc" style="font-size: 15px;">{{ product.ime }}<br>
+     <text style="font-size: 12px;">{{product.cijena|floatformat:2}}KM</text><br>
+  <button data-product={{ product.id }} data-action="add" valign="bottom" class="kupi update-cart">DODAJ U KORPU</button></div>
+</div>
+{% endfor %}
+
+
+
+
+
+
+</div>
+
+
+
+{%  endblock %}

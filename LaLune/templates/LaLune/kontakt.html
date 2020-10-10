@@ -1,0 +1,57 @@
+{% extends "LaLune/base.html" %}
+{% block body %}
+<br><br>
+    <p class="subtitle fancy"><span><i><b>KONTAKT</b></i></span></p><br>
+
+{% if ime %}
+    <div class="e">
+  <div class="box-c">
+        <a href="#" class="custom-underline">Hvala Vam na poruci {{ ime }}</a>
+      </div>
+        {% else %}
+
+<div class="e">
+  <div class="box-c">
+        <a href="#" class="custom-underline">PIŠITE NAM </a>
+      </div>
+
+  <img src="/static/img/srca.gif" align="right" valign="top" width="400" height="600">
+<form class="kontaktiranje" action="{% url 'kontakt' %}" method="post">
+    {% csrf_token %}
+  Ime:<br>
+  <input type="text" name="ime" placeholder="*Obavezno"><br>
+  E-mail adresa:<br>
+  <input type="text" name="mail" placeholder="*Obavezno"><br>
+  Poruka:<br>
+  <textarea name="poruka" rows="20" cols="100"></textarea><br>
+  <input type="submit" value="POŠALJI">
+  </form>
+
+        {% endif %}
+    </div>
+
+<div class="e">
+<div class="box-c">
+        <a href="#" class="custom-underline">POSJETITE NAS</a>
+      </div><br>
+  <table width="100%" align="center">
+    <tr>
+      <td width="60%" align="center">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.378367648803!2d15.867468915358144!3d44.81385587909857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4761406bee42fddd%3A0xe4cae75cdfa571ef!2sPape%20Ivana%20Pavla%20II%2C%20Biha%C4%87%2077000!5e0!3m2!1shr!2sba!4v1597614084109!5m2!1shr!2sba" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" style="heigh:500px;"></iframe>
+
+	</td>
+     <td style="border:1px solid #E0CCDE;" align="center">
+    <text style="font-size:20px;"><b style="color:#734f96">Naša adresa:</b><br>
+    Pape Ivana Pavla II<br>
+    77 000 Bihać, Bosna i Hercegovina <br><br>
+    <b style="color:#734f96">Radno vrijeme:</b><br>
+      <b style="color:#734f96">Pon-Pet: </b>8:00-16:00<br>
+      <b style="color:#734f96">Sub-Ned: </b>NERADNI<br><br>
+      <b style="color:#734f96">E-mail: </b>cosmeticslalune@gmail.com
+    </text>
+  </td>
+</tr></table>
+  </div>
+</div>
+
+{% endblock %}

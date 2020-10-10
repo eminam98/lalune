@@ -1,0 +1,87 @@
+{% extends "LaLune/base.html" %}
+
+{% block body %}
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><br><br>
+<p class="subtitle fancy"><span><i><b>ŠTA JE U TRENDU</b></i></span></p><br>
+    <div align="center" style="margin-left: 25px; margin-right: 25px;">Oduševite se zajednicom @lalunecosmetics s najnovijim trendovima!</div>
+<div class="galerija-section">
+<div class="inner-width">
+    <h1>Zadovoljni kupci</h1>
+    <div class="border"></div>
+    <div class="galerija">
+        <a href="/static/looks/slika35.jpg" class="image">
+            <img src="/static/looks/slika35.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika33.jpg" class="image">
+            <img src="/static/looks/slika33.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika32.jpg" class="image">
+            <img src="/static/looks/slika32.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika31.jpg" class="image">
+            <img src="/static/looks/slika31.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika28.jpg" class="image">
+            <img src="/static/looks/slika28.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika30.jpg" class="image">
+            <img src="/static/looks/slika30.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika3.jpg" class="image">
+            <img src="/static/looks/slika3.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika34.jpg" class="image">
+            <img src="/static/looks/slika34.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika29.jpg" class="image">
+            <img src="/static/looks/slika29.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika25.jpg" class="image">
+            <img src="/static/looks/slika25.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika11.jpg" class="image">
+            <img src="/static/looks/slika11.jpg" alt="">
+        </a>
+
+        <a href="/static/looks/slika26.jpg" class="image">
+            <img src="/static/looks/slika26.jpg" alt="">
+        </a>
+
+    </div>
+</div>
+
+</div>
+<div align="center">
+<div class="galerija-section">
+<div class="inner-width">
+    <h1>Novi katalog</h1>
+    <div class="border"></div>
+    <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=hkm0ppugvu" width="60%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+</div>
+Ukoliko želite preuzeti katalog, to možete uraditi ovdje!<br>
+<a href="/static/looks/katalog.pdf" download="katalog">
+<button class="btn" align="right">PREUZMI</button></div></a></div></div>
+    <script>
+    $(".galerija").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        galerija:{
+            enabled: true
+        }
+    });
+    </script>
+
+
+{% endblock %}

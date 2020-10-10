@@ -1,0 +1,10 @@
+
+{% extends "LaLune/base.html" %}
+{% block body %}
+    <h2>You have been logged out</h2>
+    <div class="">
+        <small class="">
+            <a href="{% url 'login' %}">Log In Again</a>
+        </small>
+    </div>
+{% endblock %}

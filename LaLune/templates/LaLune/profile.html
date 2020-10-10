@@ -1,0 +1,29 @@
+{% extends 'LaLune/base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<br><br>
+<p class="subtitle fancy"><span><i><b>MOJ NALOG</b></i></span></p><br>
+
+<div class="e">
+  <div class="box-c">
+        <a href="#" class="custom-underline">MOJ NALOG</a>
+      </div><br>
+     {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+  <img src="{{ user.profile.image.url }}" align="left" valign="top" width="450" height="650">
+<form class="kontaktiranje" style="margin-left: 500px;" role="form" action="" method="post" enctype="multipart/form-data">
+    Shopper information
+  <hr style="border: 1px solid #E0CCDE;"><br>
+    {% csrf_token %}
+    {{ u_form|crispy }}<br>
+    Podaci za otpremnicu
+  <hr style="border: 1px solid #E0CCDE;"><br>
+    {{ p_form|crispy }}<br>
+
+  <button type="submit" class="btn">IZMIJENI</button>
+
+  </form>
+</div>
+
+{% endblock %}

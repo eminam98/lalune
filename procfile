@@ -1,0 +1,1 @@
+web: gunicorn mojastranica.wsgi --log-file -

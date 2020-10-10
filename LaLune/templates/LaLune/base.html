@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="/static/css/all.css">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/slides.css">
+      <link rel="stylesheet" type="text/css" href="/static/slike.css">
+      <link rel="stylesheet" type="text/css" href="/static/glitch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+      <link href="https://i.imgur.com/oHYzB5X.png" rel="icon" type="image/x-icon" />
+    <title>La Lune</title>
+          <script type="text/javascript">
+		var user = '{{request.user}}'
+
+		function getToken(name) {
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '') {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++) {
+		            var cookie = cookies[i].trim();
+		            // Does this cookie string begin with the name we want?
+		            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+		                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+		var csrftoken = getToken('csrftoken')
+      </script>
+  </head>
+  <body>
+  <!--header-->
+<div class="banner">
+<a href="{% url 'home' %}"><img src="/static/img/logo1.png" width="150" align="center"></a>
+
+
+
+
+</div>
+<header >
+<nav id="navbar" valign="center">
+
+<a href="{% url 'home' %}">POČETNA </a>
+<div class="dropdown">
+  <button class="dropbtn" onClick="window.location.href='{% url 'proizvodi' %}'">PROIZVODI</button>
+  <div class="dropdown-content">
+    <ul>
+    <li><a href="{% url 'oci' %}">Oči</a></li>
+    <li><a href="{% url 'lice' %}">Lice</a></li>
+    <li><a href="{% url 'usne' %}">Usne</a></li>
+  </div>
+</div>
+
+<a href="{% url 'about' %}">O NAMA </a>
+    {% if user.username %}
+<a href="{% url 'profil' %}">MOJ PROFIL </a>
+    {% else %}
+    <a href="{% url 'register' %}">REGISTRACIJA </a>
+    {% endif %}
+<a href="{% url 'faq' %}">FAQ</a>
+
+</nav>
+<nav id="navbar" valign="center">
+<ul class="lista">
+      {% if user.username %}
+          <li><a href="{% url 'profil' %}"><img src="/static/img/icons8-user-24.png" align="left" height="15">{{user.username}}</a></img></li>
+          <li><a href="{% url 'logout' %}">LOG OUT</a></li>
+      {% else %}
+          <li><a href="{% url 'login' %}"><img src="/static/img/icons8-user-24.png" align="left" height="15">LOG IN</a></img></li>
+      {% endif %}
+
+    <li><a href="{% url 'korpa' %}"><img src="/static/img/icons8-shopping-bag-26.png" align="left" valign="bottom" height="15">
+        MOJA KORPA</a></li></ul></nav>
+</header>
+
+  {% block body %}
+  {% endblock %}
+
+  <footer>
+  <table class="futer">
+    <tr height="90%">
+      <td align="left">
+        <ul>
+          <li><a href="{% url 'about' %}">O NAMA</a></li>
+           <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'naruciti' %}">Kako naruciti</a></li>
+             <li><a href="{% url 'politika' %}">Politika privatnosti</a></li>
+              <li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+           </ul>
+           <br><br><br><br><br><br>
+         </td>
+<td align="left">
+        <ul>
+            <li><a href="{% url 'profil' %}">MOJ NALOG</a></li>
+           <li><a href="{% url 'register' %}">Registracija</a></li>
+            <li><a href="{% url 'profil' %}">Moj nalog</a></li>
+            <li><a href="{% url 'korpa' %}">Moja korpa</a></li>
+           </ul>
+            <br><br><br><br><br><br><br><br>
+         </td>
+
+
+<td width="30%" align="center"><img src="/static/img/logo1.png" width="180"><br>
+    Društvene mreže:<BR><br>
+<a href="https://www.instagram.com"><img src="/static/img/icons8-instagram-32.png" width="35"></a>
+<a href="https://www.facebook.com"><img src="/static/img/icons8-facebook-f-24.png" width="35"></a>
+<a href="https://www.youtube.com"><img src="/static/img/icons8-play-button-24.png" width="35"></a>
+<a href="https://www.twitter.com"><img src="/static/img/icons8-twitter-24.png" width="35"></a>
+<br/>
+
+<br><br><br><br></td>
+</tr>
+
+<tr height="10%">
+  <td colspan="3">
+    <p class="subtitle fancy" style="font-size: 12px;"><span><i><b>Copyright &copy; 2020 by La Lune BiH. Sva prava zadržana.</b></i></span></p>
+  </td>
+
+
+</tr>
+</table>
+
+
+
+
+
+</footer>
+
+  <script type="text/javascript" src="/static/script.js"></script>
+  <script type="text/javascript" src="/static/cart.js">
+
+  </script>
+  <script type="text/javascript" src="/static/video.js"></script>
+
+
+
+  </body>
+</html>
